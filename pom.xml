@@ -19,6 +19,28 @@
         <version>2.2.0.RELEASE</version>
         <relativePath/><!-- lookup parent from repository -->
     </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <compilerVersion>11.0.11</compilerVersion>
+                    <source>11.0.11</source>
+                    <target>11.0.11</target>
+                    <annotationProcessors>
+                        <annotationProcessor>lombok.launch.AnnotationProcessorHider$AnnotationProcessor</annotationProcessor>
+                    </annotationProcessors>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,8 +58,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
